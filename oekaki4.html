@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- リファクタリング -->
+<html>
+
+  <head>
+    <title>おえかき</title>
+    <link rel="stylesheet" href="oekaki4.css">
+    <script src="oekaki4.js" type = "module" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <canvas id="screen" width ="500" height="500"></canvas>
+    <br>
+
+    <span id = "currentColor">■</span>
+    <span id = "currentBold">●</span>
+    <input id = "clear" type = "button" value = "clear">
+    <input id = "kabenuri" type = "button" value = "壁塗り">
+
+    <span id = "radioButton">
+      &nbsp;&nbsp;&nbsp;lineCap<br>
+      <input type = "radio" name = "name" checked = "checked">有り
+      <input type = "radio" name = "name">無し
+    </span>
+
+    <br>
+    R:<input id = "sliderR" type = "range" min = "0" max = "255" step = "1" value = "0">
+    <span id = "valueR">0</span>
+    <br>
+    G:<input id = "sliderG" type = "range" min = "0" max = "255" step = "1" value = "0">
+    <span id = "valueG">0</span>
+    <br>
+    B:<input id = "sliderB" type = "range" min = "0" max = "255" step = "1" value = "0">
+    <span id = "valueB">0</span>
+    <br>
+    A:<input id = "sliderA" type = "range" min = "0.01" max = "1" step = "0.01" value = "1">
+    <span id = "valueA">1</span>
+    <br>
+    太さ:<input id = "sliderBold" type = "range" min = "1" max = "50" step = "1" value = "5">
+    <span id = "valueBold">5</span>
+    <br>
+  </body>
+
+</html>

@@ -1,0 +1,71 @@
+*{
+    font-size:120%;
+    font-family: 'MS Gothic';
+    user-select: none;
+    box-sizing: border-box;
+}
+#screen{
+    /* 枠線の太さによっては、canvasの端（上左 ro 下右 or 上下左右）に隙間ができる。4pxだと隙間はできない */
+    border: solid 4px #000;
+}
+
+
+#currentColor{
+    font-size: 60px;
+    position: absolute;
+    top:525px;
+    left:370px;
+}
+#currentBold{
+    position: absolute;
+    top:540px;
+    left:470px;
+}
+
+
+#clear{
+    position: absolute;
+    top:590px;
+    left:360px;
+}
+#kabenuri{
+    position: absolute;
+    top:590px;
+    left: 460px;
+}
+
+
+#radioButton{
+    position: absolute;
+    top:640px;
+    left:380px;
+}
+
+
+/* スライダー装飾の参考 */
+/* input type=range タグをカスタマイズするために */
+/* https://www.g200kg.com/archives/2017/12/input-typerange.html */
+
+/* スライダーの溝の共通設定 */
+input[type="range"]{
+    -webkit-appearance:none;/* 規定の装飾を解除する。これがないとほとんどアレンジできない */
+    height:10px;
+    width:240px;
+    border-radius:20px;
+    outline: none;
+}
+
+/* 太さのスライダーの設定。これ以外のスライダーは背景色を変化させるため、cssではなくjsで設定している */
+#sliderBold{
+    background: linear-gradient(darkslategray, lightgray, darkslategray);
+} 
+
+/* つまみの共通設定 */
+input[type="range"]::-webkit-slider-thumb {
+    cursor: ew-resize;
+    -webkit-appearance:none;
+    background:radial-gradient(white,black);
+    height:15px;
+    width:15px;
+    border-radius:50%;
+}
