@@ -151,13 +151,18 @@ window.addEventListener('mouseup', function (e) {
 //
 // マウスイベントと全く同じ仕様
 // e.offsetXをe.touches[0].pageX（yも同様）に置き換えた
+// タッチによるスクロールを防ぐe.preventDefault()、親要素への伝搬を防ぐe.stopPropagation()を追加
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
 canvas.addEventListener('touchstart', function (e) {
+    e.preventDefault();
+    e.stopPropagation();
     startPointX = e.touches[0].pageX;
     startPointY = e.touches[0].pageY;
     isDrawing = true;
 }, false);
 canvas.addEventListener('touchmove', function (e) {
+    e.preventDefault();
+    e.stopPropagation();
     if (isDrawing === true) {
         drawLine(e.touches[0].pageX, e.touches[0].pageY);
         startPointX = e.touches[0].pageX;
