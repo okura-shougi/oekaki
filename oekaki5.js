@@ -178,7 +178,7 @@ window.addEventListener('touchend', function (e) {
     }
 }, false);
 // canvas外でドラッグしてもスクロールさせない
-window.addEventListener('touch', function (e) {
+window.addEventListener('touchstart', function (e) {
     e.preventDefault();
     e.stopPropagation();
 }, false);
