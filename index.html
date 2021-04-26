@@ -1,16 +1,18 @@
 <!DOCTYPE html>
-<!-- リファクタリング -->
+<!-- スマホ対応にする -->
+<!-- typescriptの使い方忘れたのでリハビリ -->
+
 <html>
 
   <head>
     <title>おえかき</title>
     <link rel = "icon" href="nu.ico">
-    <link rel="stylesheet" href="oekaki4.css">
-    <script src="oekaki4.js" type = "module" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="oekaki5.css">
+    <script src="oekaki5.js" type = "module"></script>
   </head>
 
   <body>
-    <canvas id="screen" width ="500" height="500"></canvas>
+    <canvas id = "canvas" width ="500" height="500"></canvas>
     <br>
 
     <span id = "currentColor">■</span>
@@ -18,10 +20,10 @@
     <input id = "clear" type = "button" value = "clear">
     <input id = "kabenuri" type = "button" value = "壁塗り">
 
-    <span id = "radioButton">
+    <span id = "lineCap">
       &nbsp;&nbsp;&nbsp;lineCap<br>
-      <input type = "radio" name = "name" checked = "checked">有り
-      <input type = "radio" name = "name">無し
+      <input type = "radio" name = "lineCapName" checked = "checked">有り
+      <input type = "radio" name = "lineCapName">無し
     </span>
 
     <br>
@@ -43,3 +45,4 @@
   </body>
 
 </html>
+
