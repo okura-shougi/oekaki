@@ -177,6 +177,11 @@ window.addEventListener('touchend', function (e) {
         isDrawing = false;
     }
 }, false);
+// canvas外でドラッグしてもスクロールさせない
+window.addEventListener('touchmove', function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+}, false);
 var _loop_1 = function (i) {
     /**RGBAのスライダーが操作されたとき、RGBAの値に関連する各設定を変更 */
     slider[i].addEventListener('input', function (e) {
