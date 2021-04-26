@@ -10,6 +10,10 @@
     -webkit-user-select: none; /* Chrome, Safari, and Opera */
     -webkit-touch-callout: none; /* Disable Android and iOS callouts*/
 }
+body{
+ width: 600px;
+ height: 600px;
+}
 #canvas{
     /* 枠線の太さによっては、canvas外枠の内側（上と左 ro 下と右 or 上下左右）に隙間ができる。4pxだと隙間ができないので採用 */
     border: solid 4px #000;
