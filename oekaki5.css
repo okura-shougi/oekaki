@@ -1,11 +1,17 @@
 *{
     font-size:120%;
     font-family: 'MS Gothic';
-    user-select: none;
     box-sizing: border-box;
+
+    user-select: none;
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer */
+    -khtml-user-select: none; /* KHTML browsers (e.g. Konqueror) */
+    -webkit-user-select: none; /* Chrome, Safari, and Opera */
+    -webkit-touch-callout: none; /* Disable Android and iOS callouts*/
 }
-#screen{
-    /* 枠線の太さによっては、canvasの端（上左 ro 下右 or 上下左右）に隙間ができる。4pxだと隙間はできない */
+#canvas{
+    /* 枠線の太さによっては、canvas外枠の内側（上と左 ro 下と右 or 上下左右）に隙間ができる。4pxだと隙間ができないので採用 */
     border: solid 4px #000;
 }
 
@@ -35,7 +41,7 @@
 }
 
 
-#radioButton{
+#lineCap{
     position: absolute;
     top:640px;
     left:380px;
@@ -53,19 +59,23 @@ input[type="range"]{
     width:240px;
     border-radius:20px;
     outline: none;
+    /* 
+    以前はつまみに対してカーソルが変わっていたが、スライダーを直接クリックしてもつまみが動くことから、
+    スライダーに対してカーソルが変わるように変更した
+    */
+    cursor: ew-resize;
 }
-
-/* 太さのスライダーの設定。これ以外のスライダーは背景色を変化させるため、cssではなくjsで設定している */
-#sliderBold{
-    background: linear-gradient(darkslategray, lightgray, darkslategray);
-} 
 
 /* つまみの共通設定 */
 input[type="range"]::-webkit-slider-thumb {
-    cursor: ew-resize;
     -webkit-appearance:none;
     background:radial-gradient(white,black);
     height:15px;
     width:15px;
     border-radius:50%;
 }
+
+/* 太さのスライダーの設定。これ以外のスライダーは背景色をユーザーの操作に応じて変化させるため、cssではなくjsで設定している */
+#sliderBold{
+    background: linear-gradient(darkslategray, lightgray, darkslategray);
+} 
