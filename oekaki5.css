@@ -10,10 +10,12 @@
     -webkit-user-select: none; /* Chrome, Safari, and Opera */
     -webkit-touch-callout: none; /* Disable Android and iOS callouts*/
 }
-body{
- width: 600px;
- height: 600px;
-}
+
+/* #zentai{
+    width: 600px;
+    height: 600px;
+} */
+
 #canvas{
     /* 枠線の太さによっては、canvas外枠の内側（上と左 ro 下と右 or 上下左右）に隙間ができる。4pxだと隙間ができないので採用 */
     border: solid 4px #000;
@@ -59,7 +61,7 @@ body{
 /* スライダーの溝の共通設定 */
 input[type="range"]{
     -webkit-appearance:none;/* 規定の装飾を解除する。これがないとほとんどアレンジできない */
-    height:10px;
+    height:18px;
     width:240px;
     border-radius:20px;
     outline: none;
@@ -74,12 +76,12 @@ input[type="range"]{
 input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance:none;
     background:radial-gradient(white,black);
-    height:15px;
-    width:15px;
+    height:16px;
+    width:16px;
     border-radius:50%;
 }
 
 /* 太さのスライダーの設定。これ以外のスライダーは背景色をユーザーの操作に応じて変化させるため、cssではなくjsで設定している */
 #sliderBold{
-    background: linear-gradient(darkslategray, lightgray, darkslategray);
+    background: linear-gradient(lightgray, black, lightgray);
 } 
